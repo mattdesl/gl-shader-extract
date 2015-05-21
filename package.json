@@ -1,0 +1,49 @@
+{
+  "name": "gl-shader-extract",
+  "version": "1.0.0",
+  "description": "extracts uniforms and attributes from a shader object",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^10.2.1",
+    "glslify": "^2.1.2",
+    "smokestack": "^3.3.0",
+    "standard": "^3.11.0",
+    "tap-spec": "^3.0.0",
+    "tape": "^4.0.0",
+    "webgl-compile-shader": "^2.3.9",
+    "webgl-context": "^2.1.2"
+  },
+  "scripts": {
+    "smoke": "browserify test/test.js -t glslify | smokestack",
+    "test": "standard index.js && npm run smoke | tap-spec"
+  },
+  "keywords": [
+    "shader",
+    "webgl",
+    "extract",
+    "parse",
+    "data",
+    "uniforms",
+    "attrib",
+    "attributes",
+    "attribs",
+    "webglshaderobject",
+    "glsl",
+    "stackgl"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattdesl/gl-shader-extract.git"
+  },
+  "homepage": "https://github.com/mattdesl/gl-shader-extract",
+  "bugs": {
+    "url": "https://github.com/mattdesl/gl-shader-extract/issues"
+  }
+}
