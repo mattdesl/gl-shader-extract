@@ -87,7 +87,7 @@ As above, but only extracts the `attributes` array.
 
 ## Credits
 
-This was pulled out from @mikolalysenko's [gl-shader](https://www.npmjs.com/package/glsl-shader) for use in other engines/frameworks.
+This was pulled out from @mikolalysenko's [gl-shader](https://www.npmjs.com/package/gl-shader) for use in other engines/frameworks.
 
 ## License
 
