@@ -1,6 +1,6 @@
 {
   "name": "gl-shader-extract",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "extracts uniforms and attributes from a shader object",
   "main": "index.js",
   "license": "MIT",
