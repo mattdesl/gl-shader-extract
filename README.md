@@ -58,11 +58,11 @@ Extracts the `type` and `name` from each uniform/attribute that was active in th
 
 #### `uniforms = extract.uniforms(gl, program)`
 
-As above, but only returns `uniforms` array.
+As above, but only extracts the `uniforms` array.
 
 #### `attributes = extract.attributes(gl, program)`
 
-As above, but only returns `attributes` array.
+As above, but only extracts the `attributes` array.
 
 ### Type Mapping
 
