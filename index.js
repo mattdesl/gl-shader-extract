@@ -1,5 +1,7 @@
 'use strict'
 
+var GL_TO_GLSL_TYPES = require('./lib/glsl-types')
+
 module.exports = function extract (gl, program) {
   return {
     uniforms: runtimeUniforms(gl, program),
@@ -10,26 +12,6 @@ module.exports = function extract (gl, program) {
 module.exports.uniforms = runtimeUniforms
 module.exports.attributes = runtimeAttributes
 
-var GL_TO_GLSL_TYPES = {
-  'FLOAT': 'float',
-  'FLOAT_VEC2': 'vec2',
-  'FLOAT_VEC3': 'vec3',
-  'FLOAT_VEC4': 'vec4',
-  'INT': 'int',
-  'INT_VEC2': 'ivec2',
-  'INT_VEC3': 'ivec3',
-  'INT_VEC4': 'ivec4',
-  'BOOL': 'bool',
-  'BOOL_VEC2': 'bvec2',
-  'BOOL_VEC3': 'bvec3',
-  'BOOL_VEC4': 'bvec4',
-  'FLOAT_MAT2': 'mat2',
-  'FLOAT_MAT3': 'mat3',
-  'FLOAT_MAT4': 'mat4',
-  'SAMPLER_2D': 'sampler2D',
-  'SAMPLER_CUBE': 'samplerCube'
-}
-
 var GL_TABLE = null
 
 function getType (gl, type) {
@@ -38,7 +20,10 @@ function getType (gl, type) {
     GL_TABLE = {}
     for (var i = 0; i < typeNames.length; ++i) {
       var tn = typeNames[i]
-      GL_TABLE[gl[tn]] = GL_TO_GLSL_TYPES[tn]
+      var constant = gl[tn]
+      if (typeof constant !== 'undefined') {
+        GL_TABLE[constant] = GL_TO_GLSL_TYPES[tn]
+      }
     }
   }
   return GL_TABLE[type]
