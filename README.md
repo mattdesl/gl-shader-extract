@@ -85,6 +85,31 @@ As above, but only extracts the `attributes` array.
 | `SAMPLER_2D` | `sampler2D` |
 | `SAMPLER_CUBE` | `samplerCube` |
 
+#### WebGL 2.0 Support
+
+The following are also translated in WebGL2.
+
+|getProgramParameter|normalized|
+|---|---|
+| `FLOAT_MAT2x3` | `mat2x3` |
+| `FLOAT_MAT2x4` | `mat2x4` |
+| `FLOAT_MAT3x2` | `mat3x2` |
+| `FLOAT_MAT3x4` | `mat3x4` |
+| `FLOAT_MAT4x2` | `mat4x2` |
+| `FLOAT_MAT4x3` | `mat4x3` |
+| `UNSIGNED_INT` | `uint` |
+| `UNSIGNED_INT_VEC2` | `uvec2` |
+| `UNSIGNED_INT_VEC3` | `uvec3` |
+| `UNSIGNED_INT_VEC4` | `uvec4` |
+| `UNSIGNED_INT_SAMPLER_2D` | `usampler2D` |
+| `UNSIGNED_INT_SAMPLER_3D` | `usampler3D` |
+| `UNSIGNED_INT_SAMPLER_2D_ARRAY` | `usampler2DArray` |
+| `UNSIGNED_INT_SAMPLER_CUBE` | `usamplerCube` |
+| `INT_SAMPLER_2D` | `isampler2D` |
+| `INT_SAMPLER_3D` | `isampler3D` |
+| `INT_SAMPLER_2D_ARRAY` | `isampler2DArray` |
+| `INT_SAMPLER_CUBE` | `isamplerCube` |
+
 ## Credits
 
 This was pulled out from @mikolalysenko's [gl-shader](https://www.npmjs.com/package/gl-shader) for use in other engines/frameworks.
