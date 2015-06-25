@@ -60,6 +60,12 @@
     "name": "lights[0].radius",
     "type": "float"
   }, {
+    "name": "foos[0]",
+    "type": "float"
+  }, {
+    "name": "foos[1]",
+    "type": "float"
+  }, {
     "name": "tint",
     "type": "vec4"
   }],

@@ -34,10 +34,18 @@ function runtimeUniforms (gl, program) {
   var result = []
   for (var i = 0; i < numUniforms; ++i) {
     var info = gl.getActiveUniform(program, i)
-    if (info) {
+    var type = getType(gl, info.type)
+    if (info.size > 1) {
+      for (var j = 0; j < info.size; ++j) {
+        result.push({
+          name: info.name.replace('[0]', '[' + j + ']'),
+          type: type
+        })
+      }
+    } else {
       result.push({
         name: info.name,
-        type: getType(gl, info.type)
+        type: type
       })
     }
   }

@@ -10,6 +10,7 @@ struct Light {
 uniform bvec2 bools;
 uniform Light light;
 uniform Light lights[4];
+uniform float foos[2];
 uniform vec4 tint;
 uniform vec3 tint3;
 uniform sampler2D tex;
@@ -27,7 +28,7 @@ void main() {
   gl_FragColor = vec4(1.0) * b.b * tint3.x + t.x + t2.y;
   float a = tint.x;
   if (bools.x) {
-    a *= 2.0;
+    a *= 2.0 + foos[0] + foos[1];
   }
   
   gl_FragColor += vec4(1.0) * a * lights[0].radius * light.position.x;
